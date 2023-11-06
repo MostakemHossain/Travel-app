@@ -1,4 +1,6 @@
 import type { Metadata } from 'next'
+import Footer from '../components/Footer'
+import Navber from '../components/Navber'
 import './globals.css'
 
 
@@ -15,7 +17,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body >{children}</body>
+      <body >
+        <Navber/>
+        <main className='relative overflow-hidden'>
+        {children}
+        </main>
+        <Footer/>
+        </body>
     </html>
   )
 }
